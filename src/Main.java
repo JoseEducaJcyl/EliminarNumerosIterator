@@ -5,10 +5,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //Declaramos un ArrayList para numeros
         List<Integer> lista = new ArrayList<>();
 
+        //Declaramos un scanner 
         Scanner sc = new Scanner(System.in);
+        //Declaramos un boolean para controlar el bucle
         boolean continuar = true;
+        //Le pedimos al usuario numeros hasta que escriba "0"
         while (continuar) {
             System.out.println("Introduce un numero (Cero para salir): ");
             int num = sc.nextInt();
@@ -17,6 +21,7 @@ public class Main {
                 continuar = false;
             }
         }
+        //Con un interator recorremos la lista, si es par, se quita de la lista
         Iterator<Integer> iterator = lista.iterator();
         while (iterator.hasNext()) {
             int valor = iterator.next();
